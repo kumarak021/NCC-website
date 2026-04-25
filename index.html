@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NCC Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='ncc.css') }}">
+    <script src="https://kit.fontawesome.com/a6ca2ed8e0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="logo-left">
+                <img src="{{ url_for('static', filename='images/ncc logo.png') }}" alt="NCC Logo" class="ncc-logo">
+            </div>
+            <h1 class="title">National Cadet Corps (NCC)</h1>
+            <div class="logo-right">
+                <img src="{{ url_for('static', filename='images/nit logo.png') }}" alt="NIT Logo" class="nit-logo">
+            </div>
+        </div>
+        <nav class="nav-bar">
+
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#" class="nav-link" id="contact-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-overlay"></div>
+        <img src="{{ url_for('static', filename='images/1000054481.jpg') }}" alt="NCC Group" class="hero-foreground">
+        <div class="hero-text-box">
+            <h2>About NCC</h2>
+            <p>
+                The NCC is a vibrant youth organization, which has made a commendable contribution in producing responsible and patriotic citizens. From a small beginning, today it has grown to the largest youth organization. NCC motivates and trains upcoming generations to render their meaningful contribution towards national integration and development.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Card (hidden by default) -->
+    <div id="contact-card" class="contact-card">
+        <div class="contact-content">
+            <span class="close-btn">&times;</span>
+            <h3>Contact Us</h3>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +91 1234567890</p>
+                <p><i class="fas fa-envelope"></i> ncc@example.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> NCC Office, College Campus</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admission & Seats Section -->
+<section class="admission-section" id="admission">
+    <div class="section-header">
+        <h2>Admission & Seats</h2>
+        <p>Learn about our selection process and available opportunities</p>
+    </div>
+
+    <div class="admission-container">
+        <!-- Selection Process Card -->
+        <div class="process-card">
+            <div class="process-icon">
+                <i class="fas fa-user-plus"></i>
+            </div>
+            <h3>Selection Process</h3>
+            <div class="process-details">
+                <div class="detail-item">
+                    <i class="fas fa-running"></i>
+                    <span>Based on physical fitness, psychology and general aptitude</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-venus"></i>
+                    <span>33% seats reserved for girl students</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Training beyond class hours (morning/evening)</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-coins"></i>
+                    <span>Refreshment payment as per NCC rules</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seats Availability Interactive Component -->
+        <div class="seats-visualization">
+            <h3>Seats Distribution</h3>
+            <div class="branches-tabs">
+                <button class="tab-btn active" data-tab="army">Army Wing</button>
+                <button class="tab-btn" data-tab="air">Air Force Wing</button>
+                <button class="tab-btn" data-tab="fsfs">FSFS Scheme</button>
+            </div>
+
+            <div class="tab-content active" id="army-tab">
+                <div class="seats-info">
+                    <div class="seat-type">
+                        <h4>Regular NCC</h4>
+                        <div class="seat-progress">
+                            <div class="progress-bar" style="width: 100%"></div>
+                            <span>54 seats (Full capacity)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="additional-info">
+                    <p>Traditional NCC program with standard curriculum</p>
+                </div>
+            </div>
+
+            <div class="tab-content" id="air-tab">
+                <div class="seats-info">
+                    <div class="seat-type">
+                        <h4>Air Force Wing</h4>
+                        <div class="seat-progress">
+                            <div class="progress-bar" style="width:100%"></div>
+                            <span>50 seats (Started 2022-23)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="additional-info">
+                </div>
+            </div>
+
+            <div class="tab-content" id="fsfs-tab">
+                <div class="seats-info">
+                    <div class="seat-type">
+                        <h4>Fully Self Finance Scheme</h4>
+                        <div class="seat-progress">
+                            <div class="progress-bar" style="width: 100%"></div>
+                            <span>100 seats (Started 2023-24)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="additional-info">
+                    <p>Institute-funded program with enhanced facilities</p>
+                </div>
+            </div>
+
+            <div class="reservation-info">
+                <div class="reservation-card">
+                    <i class="fas fa-female"></i>
+                    <div>
+                        <h5>Girls Reservation</h5>
+                        <p>33% of all seats reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <section class="ncc-info-section" id="about">
+        <div class="info-container">
+            <div class="info-grid">
+                <!-- Organizational Details -->
+                <div class="info-card organizational-details">
+                    <div class="card-icon"><i class="fas fa-building"></i></div>
+                    <h2>Organizational Details</h2>
+                    <ul>
+                        <li><span class="label">Headquarters:</span> <span class="detail">DG NCC, New Delhi</span></li>
+                        <li><span class="label">Ministry:</span> <span class="detail">Defence, Govt of India</span></li>
+                        <li><span class="label">State Directorate:</span> <span class="detail">HR.HP PB & CHD</span></li>
+                        <li><span class="label">Group HQ:</span> <span class="detail">Ambala</span></li>
+                        <li><span class="label">Battalions:</span> <span class="detail">Army (Kurukshetra)<br>Air Force (Karnal)<br>Navy (Faridabad)</span></li>
+                        <li><span class="label">Unit :</span> <span class="detail">NIT Kurukshetra</span></li>
+
+                    </ul>
+                </div>
+
+                <!-- NCC Camps -->
+                <div class="info-card ncc-camps">
+                    <div class="card-icon"><i class="fas fa-campground"></i></div>
+                    <h2>NCC Camps</h2>
+                    <p>Cadets are required to participate in two intensive training camps:</p>
+                    <div class="camp-highlights">
+                        <div class="highlight"><i class="fas fa-calendar"></i><span>Duration: 10 days each</span></div>
+                        <div class="highlight"><i class="fas fa-clock"></i><span>Years: 2nd and 3rd</span></div>
+                    </div>
+                    <p class="camp-description">These camps immerse cadets in a disciplined, regimental lifestyle, challenging them physically and mentally to foster comprehensive personal development.</p>
+                </div>
+
+                <!-- Training and Activities -->
+                <div class="info-card training-and-activities">
+                    <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h2>Others</h2>
+                    <h3>Training Areas</h3>
+                    <ul><li><span class="label">Physical Training:</span><span class="detail">• Drill • Physical Fitness • Weapon Training • Map Reading</span></li></ul>
+                    <h3>Classroom Lectures</h3>
+                    <ul><li><span class="label">Expert Topics:</span><span class="detail">• Field Craft • Battle Craft • First Aid</span></li></ul>
+                    <h3>Social Activities</h3>
+                    <ul><li><span class="label">Community Engagement:</span><span class="detail">• Tree Plantation • Blood Donation • Disaster Relief • AIDS Awareness • Adult Education • Pulse Polio • Anti-Dowry Awareness • Yoga</span></li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wings Section -->
+    <div class="wings-section">
+        <div class="wing-box">
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/regular1.jpg') }}" alt="Army" class="default-img">
+            </div>
+           <a href="/regular">Army Regular</a>
+        </div>
+
+        <div class="wing-box">
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/navy3.jpg') }}" alt="Navy" class="default-img">
+            </div>
+            <a href="/air">Air Wing</a>
+        </div>
+
+        <div class="wing-box">
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/fsfs hero.jpg') }}" alt="Air Wing" class="default-img">
+            </div>
+            <a href="/fsfs">Army FSFS</a>
+        </div>
+    </div>
+
+<!--    <section id="gallery">-->
+<!--    <div class="gallery-container">-->
+<!--        <h2 id="g">Gallery</h2>-->
+
+<!--        <div class="gallery-layout">-->
+
+<!--            <div class="gallery-image-container">-->
+<!--                <img src="static/images/collage.png" alt="Gallery Collage" class="gallery-image">-->
+<!--            </div>-->
+
+<!--            <div class="gallery-text">-->
+<!--                <h3>View All Photos</h3>-->
+<!--                <p>Explore our complete collection of parade, camp, fun, and training moments.</p>-->
+<!--                <a href="all-photos.html" class="gallery-button">View Gallery</a>-->
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<section id="gallery">
+    <div class="gallery-container">
+        <h2 id="g" class="gallery-title">Gallery</h2>
+
+        <div class="gallery-grid">
+            <!-- Featured Image -->
+            <div class="gallery-item featured">
+                <img src="{{ url_for('static', filename='images/fsfs3.jpg') }}" alt="NCC Parade" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3>Republic Day Parade</h3>
+                    <p>NCC Cadets marching with pride</p>
+                </div>
+            </div>
+
+            <!-- Regular Images -->
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/1.jpg') }}" alt="NCC Training" class="gallery-img">
+                <div class="gallery-overlay">
+
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/2.jpg') }}" alt="NCC Camp" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3>Army Regular</h3>
+                    <p>Discipline and Unity</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/ankush2.jpg') }}" alt="NCC Activity" class="gallery-img">
+                <div class="gallery-overlay">
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/air_wing.jpg') }}" alt="Air Wing" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3>Air Wing</h3>
+                    <p>Soaring to new heights</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/ak.jpg') }}" alt="Social Service" class="gallery-img">
+                <div class="gallery-overlay">
+
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/fsfs hero.jpg') }}" alt="Army Regular" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3>Army FSFS</h3>
+                    <p>Tradition of excellence</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/gaurd.jpg') }}" alt="FSFS" class="gallery-img">
+                <div class="gallery-overlay">
+
+                </div>
+            </div>
+
+            <!-- View All Button Card -->
+            <div class="gallery-item view-all-card">
+                <div class="view-all-content">
+                    <i class="fas fa-images"></i>
+                    <h3>View Full Gallery</h3>
+                    <a href="/gallery">See All Photos →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="{{ url_for('static', filename='images/ncc logo.png') }}" alt="NCC Logo">
+            </div>
+            <div class="footer-info">
+                <h3>Address</h3>
+                <p>NIT Kurukshetra, Thanesar, Haryana</p>
+                <p><i class="fas fa-envelope"></i> ncc@nitkkr.ac.in</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright ©2025. All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='ncc.js') }}"></script>
+
+</body>
+</html>
+
+
+
